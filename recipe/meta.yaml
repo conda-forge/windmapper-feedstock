@@ -36,7 +36,7 @@ requirements:
     - cloudpickle
     - gdal
     - mpi4py
-    - windninja>=3.13.0
+    - windninja >=3.13.0
 
 test:
   imports:
