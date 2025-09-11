@@ -13,7 +13,7 @@ build:
   entry_points:
     - windmapper = windmapper:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -36,7 +36,7 @@ requirements:
     - cloudpickle
     - gdal
     - mpi4py
-    - windninja
+    - windninja >= 3.13.0
 
 test:
   imports:
