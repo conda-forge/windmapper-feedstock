@@ -1,19 +1,19 @@
 {% set name = "windmapper" %}
-{% set version = "2.2.3" %}
+{% set version = "2.2.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/windmapper-{{ version }}.tar.gz
-  sha256: 45df92b712677d083547c51b4b9a15cf4f55dc996991af3512b7d0844c70fed6
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/windmapper-{{ version }}.tar.gz
+  sha256: 162630b968f7eecbb36161fcd5fb04b44bc051abf456ae0f2bc4f970f3414842
 
 build:
   entry_points:
     - windmapper = windmapper:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
